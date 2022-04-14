@@ -1,0 +1,67 @@
+/******************************************
+/* CSS
+/*******************************************/
+
+/* Box Model Hack */
+*{
+  box-sizing: border-box;
+}
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+
+body{
+  color: lightgray;
+  background-image: url("../img/background2.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: black;
+}
+
+main{
+  padding: 20px 40px;
+  max-width: 66%;
+  font-family: 'Noto Sans', sans-serif;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 5px;
+}
+
+h1{
+  font-family: 'Meriweather', 'Noto Sans', sans-serif;
+  font-size: 4rem;
+}
+
+h2{
+  font-size: 2rem;
+  /* margin: 0; */
+}
+
+h3{
+  font-size: 1.5rem;
+}
+
+button {
+  padding: 5px 15px;
+  border:none;
+  background-color: #dde2b1;
+}
+
+button:hover {
+  cursor: pointer;
+  font-weight: bold;
+}
+
+#buttonAnswer{
+  display: none;
+}
+
+
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+    	<meta charset="utf-8">
+    	<meta name="description" content="Trivia Time">
+    	<meta name="keywords" content="trivia">
+
+		<title>Trivia Time!</title>
+
+		<!-- external CSS link -->
+		<link href="https://fonts.googleapis.com/css2?family=Gideon+Roman&family=Merriweather:wght@700&family=Noto+Sans&family=Playfair+Display:wght@600&family=Roboto:wght@500&family=Source+Sans+Pro:ital@1&display=swap" rel="stylesheet"> 
+		<link rel="stylesheet" href="css/normalize.css">
+		<link rel="stylesheet" href="css/style.css">		
+	</head>
+	<body>
+		<main>
+			<h1>It's Trivia Time!</h1>
+			<h2>Who wants to play?</h2>
+						
+			<!-- <label for="category">Choose a category:</label> -->
+
+			<select name="category" id="categorySelection">
+				<option disabled selected value>Select a category</option>
+				<option value="25">Art</option>
+				<option value="10">Books</option>
+				<option value="22">Geography</option>
+				<option value="9">General Knowledge</option>
+				<option value="23">History</option>
+				<option value="12">Music</option>
+			  	<option value="20">Mythology</option>
+			  	<option value="24">Politics</option>
+			  	<option value="21">Sports</option> 
+			</select> 
+			<button type="button" name="get question" id="buttonQuestion">Get your question</button>
+
+			<section class="triviaQuestion">
+				<h3 id="difficulty"></h3>
+				<h3 id="question"></h3>
+				<h3 id="choices"></h3>
+				<ol type="a"><span></span></ol>
+			</section>
+			<section class="triviaAnswer">
+				<button type="button" name="get answer" id="buttonAnswer">Show the answer</button>
+				<h3 id="correctAnswer"></h3>
+			</section>
+		</main>
+
+		<script type="text/javascript" src="js/main.js"></script>
+	</body>
+</html>
