@@ -5,7 +5,8 @@ function getTrivia(){
     //clear the previous answer choices and correct answer
     document.querySelector('span').innerHTML = ""
     document.querySelector('#correctAnswer').innerHTML = ""
-    
+    document.querySelector('#answerCorrectOrIncorrect').innerHTML = ""
+
     //get the category from the dom
     let category = document.querySelector('#categorySelection').value
     
@@ -25,15 +26,51 @@ function getTrivia(){
         answerChoices.push(data.results[0].correct_answer)
         answerChoices = randomizeChoices(answerChoices)
         
-        //Write to the dom the answer choices in a list
+        //Write to the dom the answer choices in a list or as a series of buttons
         for (let i=0; i<answerChoices.length; i++){
-            document.querySelector('span').innerHTML += (`<li>${answerChoices[i]}</li>`)
+            //document.querySelector('span').innerHTML += (`<a href = "#"><li>${answerChoices[i]}</li></a>`)
+            document.querySelector('span').innerHTML += (`<button type="button" name="answer choice" class="buttonAnswerChoice" id="selection${i}">${answerChoices[i]}</button>`)
         }
         
-        document.querySelector('#buttonAnswer').style.display = 'block'
-        document.querySelector('#buttonAnswer').addEventListener('click', showAnswer)
-        function showAnswer(){
-            document.querySelector('#correctAnswer').innerText = (`The answer is: ${answer}`)
+        //First display of CR, user clicks button to reveal CR
+        // document.querySelector('#buttonAnswer').style.display = 'block'
+        // document.querySelector('#buttonAnswer').addEventListener('click', showAnswer)
+        // function showAnswer(){
+        //     document.querySelector('#correctAnswer').innerText = (`The answer is: ${answer}`)
+        //}
+
+        //Second display of CR, user clicks on answer choice, which are now buttons, and page displays Correct or Incorrect
+        document.querySelector('#selection0').addEventListener('click', showAnswer0)
+        function showAnswer0(){
+            if( (document.querySelector('#selection0').textContent)===answer ){
+                document.querySelector('#answerCorrectOrIncorrect').innerText = (`"${answer}" is correct!`)
+            }else{
+                document.querySelector('#answerCorrectOrIncorrect').innerText = (`"${document.querySelector('#selection0').textContent}" is not correct, you fool!`)
+            }
+        }
+        document.querySelector('#selection1').addEventListener('click', showAnswer1)
+        function showAnswer1(){
+            if( (document.querySelector('#selection1').textContent)===answer ){
+                document.querySelector('#answerCorrectOrIncorrect').innerText = (`"${answer}" is correct!`)
+            }else{
+                document.querySelector('#answerCorrectOrIncorrect').innerText = (`"${document.querySelector('#selection1').textContent}" is not correct, you fool!`)
+            }
+        }
+        document.querySelector('#selection2').addEventListener('click', showAnswer2)
+        function showAnswer2(){
+            if( (document.querySelector('#selection2').textContent)===answer ){
+                document.querySelector('#answerCorrectOrIncorrect').innerText = (`"${answer}" is correct!`)
+            }else{
+                document.querySelector('#answerCorrectOrIncorrect').innerText = (`"${document.querySelector('#selection2').textContent}" is not correct, you fool!`)
+            }
+        }
+        document.querySelector('#selection3').addEventListener('click', showAnswer3)
+        function showAnswer3(){
+            if( (document.querySelector('#selection3').textContent)===answer ){
+                document.querySelector('#answerCorrectOrIncorrect').innerText = (`"${answer}" is correct!`)
+            }else{
+                document.querySelector('#answerCorrectOrIncorrect').innerText = (`"${document.querySelector('#selection3').textContent}" is not correct, you fool!`)
+            }
         }
 
     })
@@ -59,4 +96,4 @@ function randomizeChoices(array){
         array[randomIndex], array[currentIndex]];
     }
     return array;
-  }
+}
