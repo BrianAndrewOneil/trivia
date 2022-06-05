@@ -3,7 +3,7 @@ A free and fun trivia game for all
 
 **Link to project:** https://brianandrewoneil.github.io/trivia/
 
-![image of this web app](https://brianandrewoneil.github.io/trivia/img/trivia.png)
+<img alt="image of web app" src="https://brianandrewoneil.github.io/trivia/img/trivia.PNG" width=50%>
 
 ## How It's Made
 
