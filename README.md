@@ -8,6 +8,7 @@ A free and fun trivia game for all
 ## How It's Made
 
 **Tech used:** HTML, CSS, & JavaScript
+
 I built this fun and free-to-use trivia game using API integration with a service from www.opentdb.com. Users can select one of several categories and are then presented with a question about that topic and four answer choices. A quick click of their answer and the program informs them if they're correct or not. The user can then continue guessing until they answer correctly.
 
 ## Optimizations
