@@ -1,4 +1,4 @@
-# Free online trivia game featuring integration with an API from www.opentdb.com
+# Free online trivia game
 A free and fun trivia game for all
 
 **Link to project:** https://brianandrewoneil.github.io/trivia/
